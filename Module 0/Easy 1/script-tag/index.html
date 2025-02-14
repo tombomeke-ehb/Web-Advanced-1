@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begroeting Button</title>
+</head>
+<body>
+    <button id="begroeting">Hallo!</button>
+</body>
+<script>
+    'use strict';
+
+let knop = document.getElementById('begroeting');
+knop.addEventListener('click', () =>{
+    if(knop.textContent === ('Hallo!')){
+        knop.textContent = 'Tot ziens!';
+    }
+    else if(knop.textContent === ('Tot ziens!')){
+        knop.textContent = 'Hallo!';
+    }
+})
+</script>
+</html>
