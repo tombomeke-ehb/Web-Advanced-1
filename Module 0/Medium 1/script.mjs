@@ -1,17 +1,28 @@
+/*M1: Strict Rekenmachine"
+
+Maak een simpele rekenmachine die twee getallen optelt. Je hebt nodig:
+
+    Twee input velden voor de getallen
+    Een knop met "Bereken"
+    Een plek waar het resultaat komt
+
+Het speciale: gebruik 'use strict' en zorg dat je code controleert of er wel echt getallen worden ingevoerd.
+*/
 'use strict';
-let getal1input = document.getElementById('getal1');
-let getal2input = document.getElementById('getal2');
-let berekenKnop = document.getElementById('bereken');
-let resultaatVeld = document.getElementById('resultaat');
+let getal1 = document.getElementById('getal1');
+let getal2 = document.getElementById('getal2');
+let button = document.getElementById('bereken');
+let resultaat = document.getElementById('resultaat');
 
-berekenKnop.addEventListener('click', () => {
-    let nr1 = Number(getal1input.value);
-    let nr2 = Number(getal2input.value);
+button.addEventListener('click', function (){
+    let nr1 = Number(getal1.value);
+    let nr2 = Number(getal2.value);
 
-    if(isNaN(nr1) || isNaN(nr2)){
-        resultaatVeld.textContent = 'Voer alsjeblieft geldige getallen in!';
-        return;
-    }
+if(isNaN(nr1) || isNaN(nr2)){
+    resultaat.textContent =("Voer een geldig nummer in");
+    return;
+}
+
     let som = nr1 + nr2;
-    resultaatVeld.textContent = `${som}`;
-});
+    resultaat.textContent = (som);
+})
