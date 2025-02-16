@@ -15,7 +15,6 @@ let div = document.getElementById('output');
 let aantalSpecial = special.length;
 p2[1].style.textDecoration = 'underline';
 for(let i = 0; special.length > i; i++){
-    console.log(i);
     special[i].style.color = ('red');
 }
 div.textContent = aantalSpecial;
