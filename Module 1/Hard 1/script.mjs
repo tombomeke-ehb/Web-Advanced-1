@@ -13,6 +13,7 @@ window.addEventListener('load', function(){
     let menu = document.getElementById('mainMenu');
     let content = document.querySelector('.content');
     let h1 = content.getElementsByTagName('h1')
+    let h2 = content.getElementsByTagName('h2')
     
     let ul = document.createElement('ul');
     menu.appendChild(ul)
@@ -25,4 +26,6 @@ window.addEventListener('load', function(){
         ul.appendChild(li);
         a.textContent = h1[i].textContent;
     }
+    let sub = document.createElement('ul');
+    li.appendChild(sub);
 });
