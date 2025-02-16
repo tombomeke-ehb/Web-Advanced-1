@@ -15,11 +15,27 @@ let naam = prompt("Wat is je naam?");
 // Hou de score bij...
 // Toon het resultaat...
 */
-let naam = prompt('Wat is je naam?');
+let naam = prompt("Wat is je naam?");
 let score = 0;
-let q1 = prompt('Test');
-
-if(q1 == "yes" || q1 == "Yes"){
-    alert('Goed gedaan!')
+let q1 = prompt('Wat is de output van `console.log(2 + "2");` in JavaScript?');
+if (q1 === "22") {
+    alert('Goed gedaan!');
     score++;
+} else {
+    alert('Het juiste antwoord was: "22"');
 }
+let q2 = prompt('Welke keyword gebruik je om een constante variabele te declareren in JavaScript?');
+if (q2.toLowerCase() === "const") {
+    alert('Goed gedaan!');
+    score++;
+} else {
+    alert('Het juiste antwoord was: const');
+}
+let q3 = prompt('Wat is de juiste manier om een functie te definiëren in JavaScript? (Typ het juiste antwoord)');
+if (q3.toLowerCase() === "function myfunction() {}") {
+    alert('Goed gedaan!');
+    score++;
+} else {
+    alert('Het juiste antwoord was: function myFunction() {}');
+}
+alert('Jouw totaalscore is: ' + score);
