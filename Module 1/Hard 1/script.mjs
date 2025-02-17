@@ -9,23 +9,25 @@ Schrijf code die:
     Gebruik een combinatie van querySelector, getElementsByTagName en andere DOM methodes
     Het menu moet klikbaar zijn en naar de juiste sectie scrollen
 */
+'use strict';
 window.addEventListener('load', function(){
     let menu = document.getElementById('mainMenu');
     let content = document.querySelector('.content');
     let h1 = content.getElementsByTagName('h1')
     let h2 = content.getElementsByTagName('h2')
-    
     let ul = document.createElement('ul');
-    menu.appendChild(ul)
+    menu.appendChild(ul);
+
 
     for(let i = 0; i < h1.length; i++){
         let li = document.createElement('li');
         let a = document.createElement('a');
+        let sub = document.createElement('ul');
 
         li.appendChild(a);
         ul.appendChild(li);
+        li.appendChild(sub);
         a.textContent = h1[i].textContent;
     }
-    let sub = document.createElement('ul');
-    li.appendChild(sub);
 });
+// Later verder uitwerken
