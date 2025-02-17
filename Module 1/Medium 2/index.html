@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            gap: 20px;
+        }
+        #grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: 280px;
+            gap: 5px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+        #stats {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -16,5 +37,6 @@
             <p>Groen: <span id="greenCount">0</span></p>
         </div>
      </div>
+     <script src="script.mjs"></script>
 </body>
 </html>
