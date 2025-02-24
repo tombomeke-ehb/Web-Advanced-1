@@ -21,3 +21,21 @@ Ingrediënten:
 - Parmezaan
 */
 
+'use strict';
+const prepTime = document.getElementById('prepTime');
+const recipeName = document.getElementById('recipeName');
+const ingredients = document.getElementById('ingredients');
+const generateCard = document.getElementById('generateCard');
+const result = document.getElementById('result');
+
+generateCard.addEventListener('click', function(){
+    
+    let p = document.createElement('p');
+    p.textContent = `
+    ${recipeName.value}
+    Bereidingstijd: ${prepTime.value} minuten
+    Ingrediënten:
+    - ${ingredients.value}
+    `;
+    result.appendChild(p);
+}); 

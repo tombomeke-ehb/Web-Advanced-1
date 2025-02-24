@@ -21,7 +21,7 @@ let average = document.getElementById('average');
 let highest = document.getElementById('highest');
 
 button.addEventListener('click', function() {
-    if(input.value !== ''){
+    if(input.value !== '' && input.value < 0 || input.value > 20){
         scores.push(input.value);
         console.log(scores);
         totalscore += Number(input.value);
